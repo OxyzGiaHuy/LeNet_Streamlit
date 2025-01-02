@@ -12,7 +12,7 @@ This project provides an implementation of image classification for multiple dat
 ## Prerequisites
 Ensure the following are installed:
 - Python 3.7+
-- Required Python libraries (see [Requirements](#requirements))
+- Required Python libraries. (in `requirements.txt`)
 - Pretrained model weights:
   - MNIST: `lenet_model_mnist.pt`
   - Cassava: `lenet_model_cassava.pt`
@@ -64,21 +64,10 @@ streamlit run app.py
   - Average Pooling
   - Fully Connected Layers
 
-## Requirements
-- torch
-- torchvision
-- streamlit
-- Pillow
-
-Install dependencies using:
-```bash
-pip install torch torchvision streamlit Pillow
-```
-
 ## Directory Structure
 ```
-project/
-|
+LeNet_Streamlit/
+|-- requirements.txt
 |-- app.py                     # Main application script
 |-- model/
 |   |-- lenet_model_mnist.pt   # Pretrained MNIST model
@@ -91,11 +80,3 @@ project/
 ## Future Enhancements
 - Support for additional datasets.
 - Integration with cloud services for model hosting.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Acknowledgements
-- [PyTorch](https://pytorch.org/)
-- [Streamlit](https://streamlit.io/)
-- [Cassava Dataset](https://www.kaggle.com/c/cassava-leaf-disease-classification)
