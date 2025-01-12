@@ -106,7 +106,8 @@ def inference(image, model, dataset):
             transforms.Resize((150, 150)),
             transforms.ToTensor(),
         ])
-        img_new = img_transform(image).unsqueeze(0)
+        img_new = img_transform(image)
+        img_new = torch.unsqueeze(img_new, 0)
 
     with torch.no_grad():
         predictions = model(img_new)
